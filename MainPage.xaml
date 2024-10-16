@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KostkiApp.MainPage"
+             BackgroundColor="#F5F5DC">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+
+            <Label Text="Gra w kości."
+                   Style="{StaticResource Headline}"
+                   TextColor="Brown"
+                   HorizontalOptions="Center" />
+
+            <Button x:Name="rollDiceButton"
+                    Text="RZUĆ KOŚĆMI"
+                    BackgroundColor="Chocolate"
+                    TextColor="White"
+                    Clicked="OnRollDiceClicked"
+                    HorizontalOptions="Fill" />
+
+            <HorizontalStackLayout BackgroundColor="White" Padding="9" Spacing="9" HorizontalOptions="Center">
+                <Image x:Name="dice1" Source="question.jpg" HeightRequest="60" />
+                <Image x:Name="dice2" Source="question.jpg" HeightRequest="60" />
+                <Image x:Name="dice3" Source="question.jpg" HeightRequest="60" />
+                <Image x:Name="dice4" Source="question.jpg" HeightRequest="60" />
+                <Image x:Name="dice5" Source="question.jpg" HeightRequest="60" />
+            </HorizontalStackLayout>
+
+            <Label x:Name="rollResultLabel"
+                   Text="Wynik tego losowania: 0"
+                   TextColor="Black"
+                     Style="{StaticResource SubHeadline}"
+                   HorizontalOptions="Center" />
+
+            <Label x:Name="gameResultLabel"
+                   Text="Wynik gry: 0" 
+                   TextColor="Black"
+                   Style="{StaticResource SubHeadline}"
+                   HorizontalOptions="Center" />
+
+            <Button x:Name="resetButton"
+                    Text="RESETUJ WYNIK"
+                    BackgroundColor="Chocolate"
+                    TextColor="White"
+                    Clicked="OnResetClicked"
+                    HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
